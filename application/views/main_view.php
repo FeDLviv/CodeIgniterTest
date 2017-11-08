@@ -13,18 +13,21 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script type="text/javascript">
 
+    $(function() {
       google.charts.load('current', {'packages':['corechart']});
       google.charts.setOnLoadCallback(drawChart);
 
       function drawChart() {
 
-        var data = google.visualization.arrayToDataTable([
-          ['Time', 'Перший', 'Другий'],
-          ['2',  1000,      400],
-          ['4',  1170,      460],
-          ['6',  660,       1120],
-          ['8',  1030,      540]
-        ]);
+        // var data = google.visualization.arrayToDataTable([
+        //   ['Time', 'Перший', 'Другий'],
+        //   ['2',  1000,      400],
+        //   ['4',  1170,      460],
+        //   ['6',  660,       1120],
+        //   ['8',  1030,      540]
+        // ]);
+
+        var data = google.visualization.arrayToDataTable(<?= $arr ?>);
 
         var options = {
           hAxis: {
@@ -42,7 +45,8 @@
 
         chart.draw(data, options);
       }
-
+    });
+   
     </script>
 
 
@@ -50,12 +54,10 @@
 </head>
 
 <body>
-
+    <p><?= $first ?></p>
+    <p><?= $second ?></p>
+    <p><?= $third ?></p>  
     <p>Графік</p>
-    <div>
-        <?= $arr[0]['id'] ?>
-    </div>
-
     <div id="chart"></div>
 
 </body>
