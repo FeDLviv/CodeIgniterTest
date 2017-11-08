@@ -38,7 +38,7 @@
 |
 */
 
-$route['default_controller'] = "main/index/2016-02-20/2016-06-15/5";
+$route['default_controller'] = "main/index/2016-02-29/2016-05-04/1";
 $route['404_override'] = '';
 
 
