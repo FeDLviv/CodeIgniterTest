@@ -1,0 +1,18 @@
+body {
+    background: #666;
+    text-align: center;
+}
+
+.info {
+    font-weight: bold;
+}
+
+.info span {
+    text-decoration: underline;
+}
+
+.center {
+    margin: 0 auto;
+    width: 80vw;
+    height: 80vh;
+}
