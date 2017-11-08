@@ -31,13 +31,12 @@
 
         var options = {
           hAxis: {
-            title: 'Проміжок часу'
+            title: 'Проміжки часу'
           },
           vAxis: {
             title: 'Сума'
           },
-          colors: ['#a52714', '#097138'],
-          width: 900,
+          width: 800,
           height: 400
         };
 

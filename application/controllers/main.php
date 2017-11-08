@@ -18,7 +18,9 @@ class Main extends CI_Controller {
 		if($interval->invert == 0 || !is_numeric($step) || (is_numeric($step) && $step <= 0)) {
 			show_404();
 		} else {
-			$data['arr'] = $this->main_model->get_data($start, $stop, new DateInterval("P".$step."D"), $points);
+			$arr = $this->main_model->get_data($start, $stop, new DateInterval("P".$step."D"), $points);
+			$data['arr'] = json_encode($arr);
+			
 						
 			// $data['first'] = $start;
 			// $data['second'] = $stop;
